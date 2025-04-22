@@ -121,7 +121,7 @@ void processar_comando(const char* comando, char* resposta)
         } 
         else 
         {
-            snprintf(resposta, TAM_RESPOSTA, "REGISTRO ENCONTRADO:\n Nome: %s", banco[id].nome);
+            snprintf(resposta, TAM_RESPOSTA, "REGISTRO ENCONTRADO:\n Nome: %s", banco[id-1].nome);
         }
     }
 
