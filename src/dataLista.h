@@ -2,16 +2,20 @@
 #define DATABASE_H
 
 #define MAX_REGISTROS 100
+#define TAM_NOME 50
+#define TAM_COMANDO 256
+#define TAM_RESPOSTA 256
 
-typedef struct {
+typedef struct 
+{
     int id;
-    char nome[50];
+    char nome[TAM_NOME];
 } Registro;
 
-// Estrutura para comunicação via memória compartilhada
-typedef struct {
-    char comando[256];   // Ex: "INSERT id=1 nome=João"
-    char resposta[256];  // Resposta do servidor
+typedef struct 
+{
+    char comando[TAM_COMANDO];
+    char resposta[TAM_RESPOSTA];
 } IPCData;
 
 #endif
